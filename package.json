@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/react": "^19.2.2"
+  },
+  "dependencies": {
+    "sonner": "^2.0.7"
+  }
+  
+}
