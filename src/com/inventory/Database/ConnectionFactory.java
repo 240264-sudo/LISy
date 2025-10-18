@@ -6,8 +6,6 @@
 package com.inventory.Database;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,11 +13,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Properties;
 
-/**
- *
- * @author asjad
- */
 
+ 
 //Class to retrieve connection for database and login verfication.
 public class ConnectionFactory {
 

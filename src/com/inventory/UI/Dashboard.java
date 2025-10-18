@@ -17,8 +17,8 @@ import java.time.LocalDateTime;
 
 /**
  *
- * @author asjad
- */
+ * 
+**/
 
 // Main frame for the application after successful login
 public class Dashboard extends javax.swing.JFrame {
@@ -47,15 +47,53 @@ public class Dashboard extends javax.swing.JFrame {
 
         // Panel Layout set to Card Layout to allow switching between different sections
         displayPanel.setLayout(layout);
-        displayPanel.add("Home", new HomePage(username));
-        displayPanel.add("Users", new UsersPage());
-        displayPanel.add("Customers", new CustomerPage());
-        displayPanel.add("Products", new ProductPage(username, this));
-        displayPanel.add("Suppliers", new SupplierPage());
-        displayPanel.add("Current Stock", new CurrentStockPage(username));
-        displayPanel.add("Sales", new SalesPage(username, this));
-        displayPanel.add("Purchase", new PurchasePage(this));
-        displayPanel.add("Logs", new UserLogsPage());
+
+        try {
+            displayPanel.add("Home", new HomePage(username));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            displayPanel.add("Users", new UsersPage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            displayPanel.add("Customers", new CustomerPage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            displayPanel.add("Products", new ProductPage(username, this));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            displayPanel.add("Suppliers", new SupplierPage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            displayPanel.add("Current Stock", new CurrentStockPage(username));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            displayPanel.add("Sales", new SalesPage(username, this));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            displayPanel.add("Purchase", new PurchasePage(this));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            displayPanel.add("Logs", new UserLogsPage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
         this.addWindowListener(new WindowAdapter() {
             @Override
@@ -68,8 +106,8 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        setTitle("Inventory Manager");
-        setVisible(true);
+        this.setTitle("Inventory Manager");
+        this.setVisible(true);
     }
 
     // Methods to display different sections in the mainframe
